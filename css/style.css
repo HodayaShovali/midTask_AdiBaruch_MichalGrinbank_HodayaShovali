@@ -1,0 +1,99 @@
+@font-face {
+    font-family: 'Heebo';
+    src: url(../fonts/heebo/Heebo-VariableFont_wght.ttf) format('ttf');
+}
+
+:root {
+    font-size: 1rem; /* Base font size for mobile */
+}
+
+/* Reduce the size of the logo */
+.navbar-brand img.logo {
+    max-height: 40px; /* Adjust this value to your preference */
+    object-fit: contain; /* Ensures the image fits within its container while maintaining aspect ratio */
+    transform: translateY(-3px);
+}
+
+.bg-body-tertiary {
+    background-color: #E0EFEC; /* Custom background color for mobile screens */
+}
+
+.btn-outline-success {
+    background-color: #E4F0EC;
+}
+
+
+/* Style for the Scroll to Top Button */
+#scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 2px;
+    background-color: #75BFB2;
+    width: 50px; /* Set a fixed width for the button */
+    height: 50px; /* Set a fixed height for the button */
+    overflow: hidden; /* Ensures the image doesn't overflow the button */
+}
+
+/* Style for the image inside the button */
+#scroll-to-top img {
+    width: 100%; /* Make the image fill the button */
+    height: 100%; /* Make the image fill the button */
+    object-fit: cover; /* Ensures the image fills the container without distortion */
+}
+
+
+body {
+    font-family: Heebo;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-image: url('../images/header-bg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left center; /* צד שמאל יוצג במובייל */
+    text-align: center;
+}
+
+.header-image-container {
+    background-image: url('../images/header-image.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left center; /* צד שמאל יוצג במובייל */
+    padding: 0 0 0.8rem 0; /* Ensure header does not overlap content */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.custom-toggler:focus {
+    box-shadow: unset;
+
+}
+
+.no-results-message {
+    background-color: #E4EFEC;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+@media only screen and (min-width: 600px) {
+    :root {
+        font-size: 1rem;
+    }
+
+    .bg-body-tertiary {
+        background-image: url('../images/bg-navbar.svg');
+        background-repeat: no-repeat;
+        background-size: cover; 
+        background-position: left top; /* צד שמאל יוצג במובייל */
+
+    }
+    
+    
+
+}

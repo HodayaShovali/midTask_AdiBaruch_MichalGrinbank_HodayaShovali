@@ -1,0 +1,114 @@
+﻿<!doctype html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="JavaScript Prog 3">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Telem">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>תכנות 3 - JavaScript</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Scripts -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+    <div class="container-fluid">
+        <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+            <img class="logo img-fluid" src="images/ShebaNew.svg" alt="logo">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">מחלקות</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">אזור אישי</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">אודות</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<header>
+    <div class="header-image-container">
+        <h1>שיבא תל השומר</h1>
+        <h2>מחלקות</h2>
+
+        <form class="d-flex justify-content-center" role="search" id="searchForm">
+            <div class="col-6 col-lg-4 d-flex">
+                <input id="search" class="form-control me-2" type="search" placeholder="הקלד שם מחלקה..."
+                       aria-label="Search">
+            </div>
+            <!-- Button for large screens -->
+            <button class="btn btn-outline-success" type="submit">חיפוש</button>
+        </form>
+    </div>
+</header>
+<!-- Category Filter Section -->
+<div class="container my-4">
+    <div id="categoryFilter" class="d-flex flex-wrap gap-2 justify-content-center justify-content-sm-start">
+        <button type="button" class="btn rounded-pill btn-light btn-sm filter-badge" data-category="רפואת חירום"
+                onclick="filterDepartmentsByCategorySelection(this)">רפואת חירום
+        </button>
+        <button type="button" class="btn rounded-pill btn-light btn-sm filter-badge" data-category="מחלקות כירורגיות"
+                onclick="filterDepartmentsByCategorySelection(this)">מחלקות כירורגיות
+        </button>
+        <button type="button" class="btn rounded-pill btn-light btn-sm filter-badge" data-category="רפואה מתמחה"
+                onclick="filterDepartmentsByCategorySelection(this)">רפואה מתמחה
+        </button>
+        <button type="button" class="btn rounded-pill btn-light btn-sm filter-badge" data-category="אבחון"
+                onclick="filterDepartmentsByCategorySelection(this)">אבחון
+        </button>
+        <button type="button" class="btn rounded-pill btn-light btn-sm filter-badge" data-category="שיקום"
+                onclick="filterDepartmentsByCategorySelection(this)">שיקום
+        </button>
+
+    </div>
+</div>
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-3 g-4" id="departments">
+        <p>Loading departments...</p>
+    </div>
+    <!-- Bootstrap Modal -->
+    <div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="detailsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="detailsModalLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex justify-content-center">
+                        <img id="modalImage" src="" alt="" class="img-fluid mb-3">
+                    </div>
+                    <p id="modalDetailedInfo"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">סגור</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<button id="scroll-to-top" class="btn btn-light btn-lg " style="display: none;" onclick="scrollToTop()">
+    <img src="images/scroll-icon.svg" alt="Scroll to Top" id="scroll-icon">
+</button>
+</body>
+</html>

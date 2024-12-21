@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2277.9 592.54">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+        mix-blend-mode: multiply;
+        opacity: .4;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill: #e1efec;
+      }
+
+      .cls-4 {
+        fill: none;
+      }
+
+      .cls-5 {
+        isolation: isolate;
+      }
+
+      .cls-6 {
+        fill: #79c9bc;
+      }
+
+      .cls-7 {
+        fill: #bde5de;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="1748.54" y1="1283.06" x2="553.82" y2="-650.93" gradientUnits="userSpaceOnUse">
+      <stop offset=".03" stop-color="#79c9bc"/>
+      <stop offset=".05" stop-color="#86cec2"/>
+      <stop offset=".11" stop-color="#a6dbd2"/>
+      <stop offset=".18" stop-color="#c2e6e0"/>
+      <stop offset=".26" stop-color="#d8efeb"/>
+      <stop offset=".35" stop-color="#e9f6f4"/>
+      <stop offset=".46" stop-color="#f6fbfa"/>
+      <stop offset=".61" stop-color="#fdfefe"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+  </defs>
+  <g class="cls-5">
+    <g id="Background">
+      <rect class="cls-3" width="2277.9" height="592.54"/>
+      <rect class="cls-1" width="2277.9" height="592.54"/>
+    </g>
+  </g>
+</svg>
