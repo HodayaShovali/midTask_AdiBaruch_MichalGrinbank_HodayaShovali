@@ -165,6 +165,12 @@ function filterDepartments() {
     const activeCategory = document.querySelector('.filter-badge.active');
     let hasResults = false;
 
+    const noResultsMessage = document.getElementById('no-results-message');
+    // delete old no results message if exists
+    if (noResultsMessage) {
+        noResultsMessage.remove();
+    }
+    
     // no search term and no active catagory selected -- show everything.
     if (!query && !activeCategory) {
         departments.forEach(department => {
@@ -188,11 +194,6 @@ function filterDepartments() {
         }
     });
 
-    const noResultsMessage = document.getElementById('no-results-message');
-    // delete old no results message if exists
-    if (noResultsMessage) {
-        noResultsMessage.remove();
-    }
     
     // if no results - add no results message
     if (!hasResults) {
